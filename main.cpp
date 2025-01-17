@@ -28,7 +28,7 @@ float CalcTotal (const int quantity[], const float price[])
   float sum = 0;
   for (int i= 0; i < 20 ; i++)
     {
-      sum += quantity[i] * price[i]
+      sum += quantity[i] * price[i];
     }
   return sum;
 }
