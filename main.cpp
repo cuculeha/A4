@@ -1,5 +1,5 @@
 // Author      : Saliha Babar
-// Assignment  : A3
+// Assignment  : A4
 // Due Date    : 01/22/2025
 // Purpose     : Standard Vector
 
@@ -19,7 +19,8 @@ int main(){
 
   // Pass these data to the function
   total = CalcTotal (onHand, wholesale);
-  cout << "The total is $" << total << endl;
+  
+  cout << fixed << setprecision(2) << "The total is $" << total << endl;
 return 0;
 }
 
