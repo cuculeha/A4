@@ -56,20 +56,15 @@ void FormatOutput ( const double total )
 	cout << "$" << third << "," << second << "," << first <<
 	"." << decimal << endl;
 
-	if (third != 0 )
-	{
-		cout << "$" << third << "," << second << "," << first <<
-		"." << decimal << endl;
-	}
-	
-	else if (third == 0 )
-	{
+	if (third != 0) {
+		cout << "$" << third << "," << second << "," << first << "." << decimal << endl;
+		}
+		
+	else if (second != 0) {
 		cout << "$" << second << "," << first << "." << decimal << endl;
-	}
-
-	else if ( third == 0 && second == 0)
-	{
+		}
+		
+	else {
 		cout << "$" << first << "." << decimal << endl;
-	}
-	
+		}
 }
