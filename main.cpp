@@ -39,7 +39,6 @@ double CalcTotal (const int quantity[], const float price[])
   return sum;
 }
 
-
 void FormatOutput ( const double total )
 {
   int sumTruncated = static_cast<int>(total);
