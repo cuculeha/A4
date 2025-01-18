@@ -19,13 +19,13 @@ int main(){
                           40.12, 22.27, 71.64, 24.26, 34.18, 44.92, 19.70,
                           41.70, 66.42, 83.43, 53.72, 31.22, 98.19};
   double total;
-  string StringofTotal;
-  
+    
   // Pass these data to the function
   total = CalcTotal (onHand, wholesale);
 
   // Format the output
   FormatOutput (total);
+
 return 0;
 }
 
@@ -55,5 +55,21 @@ void FormatOutput ( const double total )
 	
 	cout << "$" << third << "," << second << "," << first <<
 	"." << decimal << endl;
+
+	if (third != 0 )
+	{
+		cout << "$" << third << "," << second << "," << first <<
+		"." << decimal << endl;
+	}
+	
+	else if (third == 0 )
+	{
+		cout << "$" << second << "," << first << "." << decimal << endl;
+	}
+
+	else if ( third == 0 && second == 0)
+	{
+		cout << "$" << first << "." << decimal << endl;
+	}
 	
 }
