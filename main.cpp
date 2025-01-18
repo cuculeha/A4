@@ -23,7 +23,6 @@ int main(){
   
   // Pass these data to the function
   total = CalcTotal (onHand, wholesale);
-  StringofTotal = static_cast<string>(total);
   
   cout << fixed << setprecision(2) << "The total is $" << total << endl;
   cout << "in string " << StringofTotal << endl;
