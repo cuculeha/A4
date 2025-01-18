@@ -53,13 +53,20 @@ void FormatOutput ( const double total )
 	second = (sumTruncated % 1000000)/1000;
 	third = (sumTruncated % 1000000000) /1000000;
 	
+	if (third!= 0 )
+	{
+		cout << "$" << third << "," << second << "," << first <<
+		"." << decimal << endl;
+	}
 	
-	cout << decimal << endl;
-	cout << first << endl;
-	cout << second << endl;
-	cout << third << endl;
-	
-	cout << "$" << third << "," << second << "," << first <<
-	"." << decimal << endl;
+	else if (third == 0 )
+	{
+		cout << "$" << second << "," << first << "." << decimal << endl;
+	}
+
+	else if ( third == 0 && second == 0)
+	{
+		cout << "$" << first << "." << decimal << endl;
+	}
 	
 }
