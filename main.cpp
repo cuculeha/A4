@@ -1,7 +1,7 @@
 // Author      : Saliha Babar
 // Assignment  : A4
 // Due Date    : 01/22/2025
-// Purpose     : Standard Vector
+// Purpose     : Standard Vector Assignmnent
 
 #include <iostream>
 #include <iomanip>
