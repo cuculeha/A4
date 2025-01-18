@@ -52,15 +52,17 @@ void FormatOutput ( const double total )
 	second = (sumTruncated % 1000000)/1000;
 	third = (sumTruncated % 1000000000) /1000000;
 	
+	cout << "Inventory Wholesale Value: $";
+
 	if (third != 0) {
-		cout << "$" << third << "," << second << "," << first << "." << decimal << endl;
+		cout << third << "," << second << "," << first << "." << decimal << endl;
 		}
 		
 	else if (second != 0) {
-		cout << "$" << second << "," << first << "." << decimal << endl;
+		cout << second << "," << first << "." << decimal << endl;
 		}
 		
 	else {
-		cout << "$" << first << "." << decimal << endl;
+		cout << first << "." << decimal << endl;
 		}
 }
