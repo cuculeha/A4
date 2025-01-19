@@ -42,6 +42,31 @@ double CalcTotal (const int quantity[], const float price[])
 
 void FormatOutput ( double total )
 {
-	cout << fixed <<setprecision(2) ;
-	cout << "Inventory WholeSale Value : $" << put_money(total * 100) << endl;
+	int sumTruncated = static_cast<int>(total);
+	int decimal;
+	int first;
+	int second;
+	int third;
+	
+	decimal = (total - sumTruncated) * 100 ;
+	first = sumTruncated % 1000;
+	second = (sumTruncated % 1000000)/1000;
+	third = (sumTruncated % 1000000000) /1000000;
+
+	cout << "Inventory WholeSale Value : $" ;
+	if (third!= 0 )
+	{
+		cout << "$" << third << "," << second << "," << first <<
+		"." << decimal << endl;
+	}
+	
+	else if (third == 0 )
+	{
+		cout << "$" << second << "," << first << "." << decimal << endl;
+	}
+
+	else if ( third == 0 && second == 0)
+	{
+		cout << "$" << first << "." << decimal << endl;
+	}
 }
