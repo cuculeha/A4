@@ -12,7 +12,7 @@ using namespace std;
 const int numBooks = 20;
 
 double CalcTotal (const int quantity[], const float price[]);
-void FormatOutput ( const double total );
+void FormatOutput ( double total );
 
 int main(){
   int onHand [20] = {17,3,6,0,19,7,18,15,5,4,7,14,18,12,12,3,5,19,16,15};
@@ -26,7 +26,6 @@ int main(){
 
   // Format the output
   FormatOutput (total);
-	cout << put_money(total);
 
 return 0;
 }
@@ -41,30 +40,8 @@ double CalcTotal (const int quantity[], const float price[])
   return sum;
 }
 
-void FormatOutput ( const double total )
+void FormatOutput ( double total )
 {
-  int sumTruncated = static_cast<int>(total);
-	int decimal;
-	int first;
-	int second;
-	int third;
-	
-	decimal = (total - sumTruncated) * 100 ;
-	first = sumTruncated % 1000;
-	second = (sumTruncated % 1000000)/1000;
-	third = (sumTruncated % 1000000000) /1000000;
-	
-	cout << "Inventory Wholesale Value: $";
-
-	if (third != 0) {
-		cout << third << "," << second << "," << first << "." << decimal << endl;
-		}
-		
-	else if (second != 0) {
-		cout << second << "," << first << "." << decimal << endl;
-		}
-		
-	else {
-		cout << first << "." << decimal << endl;
-		}
+	cout << fixed <<setprecision(2) ;
+	cout << "Inventory WholeSale Value : $" << put_money(total * 100) << endl;
 }
