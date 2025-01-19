@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <locale>
 
 using namespace std;
 
@@ -25,6 +26,7 @@ int main(){
 
   // Format the output
   FormatOutput (total);
+	cout << put_money(total);
 
 return 0;
 }
