@@ -12,7 +12,7 @@ using namespace std;
 
 const int numBooks = 20;
 
-double CalcTotal (const vector<int> quantity, const vector <float> price[]);
+double CalcTotal (const vector<int> quantity, const vector <float> price);
 void FormatOutput ( double total );
 
 int main(){
