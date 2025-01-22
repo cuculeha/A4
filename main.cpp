@@ -5,15 +5,14 @@
 
 #include <iostream>
 #include <iomanip>
-#include <locale>
-#include <vector>
+#include <vector>        // Including vector library
 
-using namespace std;
+using namespace std; 
 
 const int numBooks = 20;
 
-double CalcTotal (const vector<int> &quantity, const vector <float> &price);
-void FormatOutput ( double total );
+double CalcTotal (const vector<int> &quantity, const vector <float> &price); // Function to calculate total
+void FormatOutput ( double total );                                          // Function to format output ( add commas & dollar sign )
 
 int main(){
   vector <int> onHand {17,3,6,0,19,7,18,15,5,4,7,14,18,12,12,3,5,19,16,15};
@@ -48,8 +47,10 @@ void FormatOutput ( double total )
 	int first;
 	int second;
 	int third;
-	
+
 	decimal = (total - sumTruncated) * 100 ;
+	
+	// Assigning commas in their place
 	first = sumTruncated % 1000;
 	second = (sumTruncated % 1000000)/1000;
 	third = (sumTruncated % 1000000000) /1000000;
