@@ -12,7 +12,7 @@ using namespace std;
 
 const int numBooks = 20;
 
-double CalcTotal (const vector<int> quantity, const vector <float> price);
+double CalcTotal (const vector<int> &quantity, const vector <float> &price);
 void FormatOutput ( double total );
 
 int main(){
@@ -31,10 +31,10 @@ int main(){
 return 0;
 }
 
-double CalcTotal (const vector<int> quantity,  const vector <float> price[])
+double CalcTotal (const vector<int> &quantity,  const vector <float> &price)
 {
   double sum = 0;
-  for (int i= 0; i < 20 ; i++)
+  for (int i= 0; i < numBooks ; i++)
     {
       sum += quantity[i] * price[i];
     }
