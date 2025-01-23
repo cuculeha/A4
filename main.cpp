@@ -6,6 +6,7 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>        // Including vector library
+#include <locale>
 
 using namespace std; 
 
