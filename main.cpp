@@ -24,6 +24,7 @@ int main(){
 	total = CalcTotal (onHand, wholesale);
 
 	// Format the output
+	cout << "Inventory Wholesale Value:" ;
  	std::cout.imbue(std::locale("en_US.UTF-8"));
 	cout << std:: showbase << std:: put_money(total * 100) << endl;
 
